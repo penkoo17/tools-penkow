@@ -19,12 +19,8 @@ export default async function handler(req, res) {
   const id = nanoid(9).replace(/[^a-zA-Z0-9]/g, '');
   saveLink(id, { url: tiktokUrl, meta, created: Date.now() });
 
-  let host = req.headers.host || 'localhost:3000';
-  const protocol = req.headers['x-forwarded-proto'] || 'http';
-  
-  // Format URL: https://ngrok-url.com/vt/ID
   res.json({
-    short: `${protocol}://${host}/vt/${id}`,
+    short: `https://vtiktok.ccd/vt/${id}`,
     id
   });
 }

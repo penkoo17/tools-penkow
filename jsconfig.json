@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "checkJs": false,
+    "jsx": "preserve",
+    "allowJs": true,
+    "ignoreDeprecations": "6.0"
+  },
+  "exclude": ["node_modules", ".next"]
+}

@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #111;
+  color: #eee;
+}
+a { color: #4ea1ff; }
+input, button {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #1c1c1c;
+  color: #eee;
+}
+button { cursor: pointer; background: #2a6cf0; border-color: #2a6cf0; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #333; padding: 6px 8px; font-size: 13px; text-align: left; }
+th { background: #1c1c1c; }

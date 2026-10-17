@@ -1,0 +1,1123 @@
+[
+  {
+    "id": "QlTTTSuJ",
+    "type": "server",
+    "ip": "::ffff:127.0.0.1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "referer": null,
+    "acceptLang": "id,en-US;q=0.9,en;q=0.8",
+    "timestamp": 1792240384423,
+    "ipGeo": {},
+    "received": 1792240385366
+  },
+  {
+    "id": "QlTTTSuJ",
+    "type": "client",
+    "ts": 1792240385430,
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "lang": "id",
+    "langs": [
+      "id",
+      "en-US",
+      "en"
+    ],
+    "tz": "Asia/Jakarta",
+    "screen": "1366x768",
+    "window": "1366x643",
+    "colorDepth": 24,
+    "deviceMemory": null,
+    "hardwareConcurrency": 4,
+    "touchPoints": 0,
+    "platform": "Win32",
+    "cookieEnabled": true,
+    "onLine": true,
+    "canvasHash": "NEY0RjdDNNKcyCMAAAAASUVORK5CYII=",
+    "webglVendor": "Google Inc. (Intel)",
+    "webglRenderer": "ANGLE (Intel, Intel(R) HD Graphics 400 Direct3D11 vs_5_0 ps_5_0), or similar",
+    "received": 1792240385521
+  },
+  {
+    "id": "jODe_G3X",
+    "type": "server",
+    "ip": "::ffff:127.0.0.1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "referer": null,
+    "acceptLang": "id,en-US;q=0.9,en;q=0.8",
+    "timestamp": 1792240795293,
+    "ipGeo": {},
+    "received": 1792240795573
+  },
+  {
+    "id": "jODe_G3X",
+    "type": "client",
+    "ts": 1792240795605,
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "lang": "id",
+    "langs": [
+      "id",
+      "en-US",
+      "en"
+    ],
+    "tz": "Asia/Jakarta",
+    "screen": "1366x768",
+    "window": "1366x643",
+    "colorDepth": 24,
+    "deviceMemory": null,
+    "hardwareConcurrency": 4,
+    "touchPoints": 0,
+    "platform": "Win32",
+    "cookieEnabled": true,
+    "onLine": true,
+    "canvasHash": "NEY0RjdDNNKcyCMAAAAASUVORK5CYII=",
+    "webglVendor": "Google Inc. (Intel)",
+    "webglRenderer": "ANGLE (Intel, Intel(R) HD Graphics 400 Direct3D11 vs_5_0 ps_5_0), or similar",
+    "received": 1792240795684
+  },
+  {
+    "id": "Qyz0Pgm9",
+    "type": "server",
+    "ip": "::ffff:127.0.0.1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "referer": null,
+    "acceptLang": "id,en-US;q=0.9,en;q=0.8",
+    "timestamp": 1792241241327,
+    "ipGeo": {},
+    "received": 1792241241677
+  },
+  {
+    "id": "Qyz0Pgm9",
+    "type": "client",
+    "ts": 1792241260125,
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "lang": "id",
+    "tz": "Asia/Jakarta",
+    "screen": "1252x704",
+    "gpsError": "User denied geolocation prompt",
+    "received": 1792241276210
+  },
+  {
+    "id": "Qyz0Pgm9",
+    "type": "server",
+    "ip": "::ffff:127.0.0.1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "referer": null,
+    "acceptLang": "id,en-US;q=0.9,en;q=0.8",
+    "timestamp": 1792241317666,
+    "ipGeo": {},
+    "received": 1792241318542
+  },
+  {
+    "id": "Qyz0Pgm9",
+    "type": "client",
+    "ts": 1792241320164,
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "lang": "id",
+    "tz": "Asia/Jakarta",
+    "screen": "1252x704",
+    "gpsError": "User denied geolocation prompt",
+    "received": 1792241326364
+  },
+  {
+    "id": "Qyz0Pgm9",
+    "type": "server",
+    "ip": "::ffff:127.0.0.1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "referer": null,
+    "acceptLang": "id,en-US;q=0.9,en;q=0.8",
+    "timestamp": 1792241328420,
+    "ipGeo": {},
+    "received": 1792241328690
+  },
+  {
+    "id": "Qyz0Pgm9",
+    "type": "server",
+    "ip": "::ffff:127.0.0.1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "referer": null,
+    "acceptLang": "id,en-US;q=0.9,en;q=0.8",
+    "timestamp": 1792241339821,
+    "ipGeo": {},
+    "received": 1792241340090
+  },
+  {
+    "id": "Qyz0Pgm9",
+    "type": "client",
+    "ts": 1792241340924,
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "lang": "id",
+    "tz": "Asia/Jakarta",
+    "screen": "1252x704",
+    "gpsError": "Position acquisition timed out",
+    "received": 1792241346535
+  },
+  {
+    "id": "Qyz0Pgm9",
+    "type": "server",
+    "ip": "::ffff:127.0.0.1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "referer": null,
+    "acceptLang": "id,en-US;q=0.9,en;q=0.8",
+    "timestamp": 1792241352894,
+    "ipGeo": {},
+    "received": 1792241353181
+  },
+  {
+    "id": "Qyz0Pgm9",
+    "type": "client",
+    "ts": 1792241354524,
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "lang": "id",
+    "tz": "Asia/Jakarta",
+    "screen": "1252x704",
+    "gpsError": "Position acquisition timed out",
+    "received": 1792241359965
+  },
+  {
+    "id": "jpotbMI1",
+    "type": "server",
+    "ip": "::ffff:127.0.0.1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "referer": null,
+    "acceptLang": "id,en-US;q=0.9,en;q=0.8",
+    "timestamp": 1792241637525,
+    "ipGeo": {},
+    "received": 1792241637905
+  },
+  {
+    "id": "0S3w-qnt",
+    "type": "server",
+    "ip": "::ffff:127.0.0.1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "referer": null,
+    "acceptLang": "id,en-US;q=0.9,en;q=0.8",
+    "timestamp": 1792241662426,
+    "ipGeo": {},
+    "received": 1792241662684
+  },
+  {
+    "id": "0S3w-qnt",
+    "type": "client",
+    "ts": 1792241663708,
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "lang": "id",
+    "tz": "Asia/Jakarta",
+    "screen": "1252x704",
+    "gpsError": "Position acquisition timed out",
+    "received": 1792241666728
+  },
+  {
+    "id": "Bed6cHEd",
+    "type": "server",
+    "ip": "192.168.1.11",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "referer": null,
+    "acceptLang": "en-US,en;q=0.9,id;q=0.8",
+    "timestamp": 1792242223075,
+    "ipGeo": {},
+    "received": 1792242223391
+  },
+  {
+    "id": "Bed6cHEd",
+    "type": "client",
+    "ts": 1792242225408,
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "lang": "en-US",
+    "tz": "Asia/Jakarta",
+    "screen": "360x820",
+    "gpsError": "Only secure origins are allowed (see: https://goo.gl/Y0ZkNV).",
+    "received": 1792242224778
+  },
+  {
+    "id": "Bed6cHEd",
+    "type": "server",
+    "ip": "192.168.1.11",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "referer": null,
+    "acceptLang": "en-US,en;q=0.9,id;q=0.8",
+    "timestamp": 1792242275788,
+    "ipGeo": {},
+    "received": 1792242276058
+  },
+  {
+    "id": "Bed6cHEd",
+    "type": "client",
+    "ts": 1792242278164,
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "lang": "en-US",
+    "tz": "Asia/Jakarta",
+    "screen": "360x820",
+    "gpsError": "Only secure origins are allowed (see: https://goo.gl/Y0ZkNV).",
+    "received": 1792242277515
+  },
+  {
+    "id": "Bed6cHEd",
+    "type": "server",
+    "ip": "::ffff:192.168.1.11",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "referer": null,
+    "acceptLang": "en-US,en;q=0.9,id;q=0.8",
+    "timestamp": 1792242604752,
+    "ipGeo": {},
+    "received": 1792242605247
+  },
+  {
+    "id": "qx6yfk-O",
+    "type": "server",
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "referer": null,
+    "acceptLang": "en-US,en;q=0.9,id;q=0.8",
+    "timestamp": 1792242698817,
+    "ipGeo": {},
+    "received": 1792242699337
+  },
+  {
+    "id": "qx6yfk-O",
+    "type": "client",
+    "ts": 1792242708594,
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "lang": "en-US",
+    "tz": "Asia/Jakarta",
+    "screen": "360x820",
+    "gpsError": "Timeout expired",
+    "received": 1792242712093
+  },
+  {
+    "id": "0pkp5_l6",
+    "type": "client",
+    "ts": 1792243239592,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "tz": "Asia/Jakarta",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "gps": {
+      "lat": 0.5176186,
+      "lng": 101.4152844,
+      "accuracy": 20
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792243244621
+  },
+  {
+    "id": "affAvief",
+    "type": "client",
+    "ts": 1792245146521,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "tz": "Asia/Jakarta",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "gpsError": "Timeout expired",
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245150054
+  },
+  {
+    "id": "affAvief",
+    "type": "client",
+    "ts": 1792245159031,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "tz": "Asia/Jakarta",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "gpsError": "Timeout expired",
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245162282
+  },
+  {
+    "id": "Cdz-2vgl",
+    "type": "client_ip_only",
+    "ts": 1792245604851,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245604253
+  },
+  {
+    "id": "Cdz-2vgl",
+    "type": "client_ip_only",
+    "ts": 1792245604843,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245604255
+  },
+  {
+    "id": "Cdz-2vgl",
+    "type": "client_gps",
+    "ts": 1792245611359,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "gpsError": "Timeout expired",
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245613607
+  },
+  {
+    "id": "Cdz-2vgl",
+    "type": "client_ip_only",
+    "ts": 1792245624957,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245624245
+  },
+  {
+    "id": "Cdz-2vgl",
+    "type": "client_ip_only",
+    "ts": 1792245624964,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245624247
+  },
+  {
+    "id": "Cdz-2vgl",
+    "type": "client_gps",
+    "ts": 1792245625646,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "gps": {
+      "lat": 0.5176204,
+      "lng": 101.4152851,
+      "accuracy": 20
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245625323
+  },
+  {
+    "id": "WutctQFp",
+    "type": "client_ip_only",
+    "ts": 1792245643731,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245643171
+  },
+  {
+    "id": "WutctQFp",
+    "type": "client_ip_only",
+    "ts": 1792245643738,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245643242
+  },
+  {
+    "id": "WutctQFp",
+    "type": "client_gps",
+    "ts": 1792245644162,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "gps": {
+      "lat": 0.517624,
+      "lng": 101.4152851,
+      "accuracy": 20
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245643788
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792245669502,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245668813
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792245669510,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245668968
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_gps",
+    "ts": 1792245670159,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "gpsError": "Timeout expired",
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245672377
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792245685684,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245684992
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792245685693,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245685147
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792245703434,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245703573
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792245703440,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245703618
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_gps",
+    "ts": 1792245704925,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "gpsError": "User denied geolocation prompt",
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245706726
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792245762994,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245763194
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792245762999,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245763333
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_gps",
+    "ts": 1792245764325,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "gpsError": "User denied geolocation prompt",
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792245772594
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792246032707,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246032031
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792246032700,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246032138
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792246071014,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246070513
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792246071020,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246070547
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792246077221,
+    "ip": "2001:448a:1082:93a2:13b0:494f:c240:2ed5",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Pekanbaru",
+      "country": "Indonesia",
+      "lat": 0.516668,
+      "lng": 101.4416692
+    },
+    "ipGeo": {
+      "city": "Pekanbaru",
+      "country": "Indonesia",
+      "lat": 0.516668,
+      "lng": 101.4416692,
+      "isp": "Telekomunikasi Indonesia PT"
+    },
+    "received": 1792246077811
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792246077211,
+    "ip": "2001:448a:1082:93a2:13b0:494f:c240:2ed5",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Pekanbaru",
+      "country": "Indonesia",
+      "lat": 0.516668,
+      "lng": 101.4416692
+    },
+    "ipGeo": {
+      "city": "Pekanbaru",
+      "country": "Indonesia",
+      "lat": 0.516668,
+      "lng": 101.4416692,
+      "isp": "Telekomunikasi Indonesia PT"
+    },
+    "received": 1792246077952
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_gps",
+    "ts": 1792246080780,
+    "ip": "2001:448a:1082:93a2:13b0:494f:c240:2ed5",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "gpsError": "Timeout expired",
+    "ipGeo": {
+      "city": "Pekanbaru",
+      "country": "Indonesia",
+      "lat": 0.516668,
+      "lng": 101.4416692,
+      "isp": "Telekomunikasi Indonesia PT"
+    },
+    "received": 1792246084298
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792246135062,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246134358
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792246135054,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246134463
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792246236026,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246235508
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_ip_only",
+    "ts": 1792246236016,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "clientIpGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246236204
+  },
+  {
+    "id": "AnonjS_C",
+    "type": "client_gps",
+    "ts": 1792246236608,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "gps": {
+      "lat": 0.5176231,
+      "lng": 101.4152894,
+      "accuracy": 20
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246236990
+  },
+  {
+    "id": "ETGS62Xq",
+    "type": "client_gps",
+    "ts": 1792246926510,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "gps": {
+      "lat": 0.5176197,
+      "lng": 101.4152896,
+      "accuracy": 20
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246927097
+  },
+  {
+    "id": "ETGS62Xq",
+    "type": "client_gps",
+    "ts": 1792246942302,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "gps": {
+      "lat": 0.5176143,
+      "lng": 101.4152858,
+      "accuracy": 20
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246941978
+  },
+  {
+    "id": "ETGS62Xq",
+    "type": "client_gps",
+    "ts": 1792246960979,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 16; Infinix X6882 Build/BP4A.251205.006) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.8059.43 Mobile Safari/537.36",
+    "gps": {
+      "lat": 0.517619,
+      "lng": 101.4152888,
+      "accuracy": 20
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792246968841
+  },
+  {
+    "id": "ETGS62Xq",
+    "type": "client_gps",
+    "ts": 1792247089775,
+    "ip": "2001:448a:1082:93a2:29d1:3c79:40cc:8b4d",
+    "ua": "Mozilla/5.0 (Linux; Android 16; en; Infinix X6853 Build/SP1A.210812.016) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.8059.43 HiBrowser/v3.01.02.1 UWS/ Mobile Safari/537.36",
+    "gps": {
+      "lat": 0.46846846846846846,
+      "lng": 101.40878377789758,
+      "accuracy": 2000
+    },
+    "ipGeo": {
+      "city": "Pekanbaru",
+      "country": "Indonesia",
+      "lat": 0.516668,
+      "lng": 101.4416692,
+      "isp": "Telekomunikasi Indonesia PT"
+    },
+    "received": 1792247102686
+  },
+  {
+    "id": "aDsbLWPA",
+    "type": "client_gps",
+    "ts": 1792248040202,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "gps": {
+      "lat": 0.517619,
+      "lng": 101.4152888,
+      "accuracy": 100
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792248039689
+  },
+  {
+    "id": "z9MxsiQpj",
+    "type": "client_gps",
+    "ts": 1792248768250,
+    "ip": "140.213.200.101",
+    "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+    "gps": {
+      "lat": 0.517619,
+      "lng": 101.4152888,
+      "accuracy": 100
+    },
+    "ipGeo": {
+      "city": "Batam",
+      "country": "Indonesia",
+      "lat": 1.1493738,
+      "lng": 104.0249089,
+      "isp": "Indonesia Network Information Center"
+    },
+    "received": 1792248767981
+  }
+]

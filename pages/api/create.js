@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
     // Ubah URL asli jadi Base64 (biar aman & pendek)
     const encodedUrl = Buffer.from(tiktokUrl).toString('base64url');
-    const shortUrl = `https://vtiktok.ccd/vt/${encodedUrl}`;
+    const shortUrl = `https://vtiktok.ccd/${encodedUrl}`;
     
     res.status(200).json({ short: shortUrl });
   } catch (error) {

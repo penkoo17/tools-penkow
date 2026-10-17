@@ -1,3 +1,5 @@
+import { kv } from '@vercel/kv';
+import { nanoid } from 'nanoid';
 import { isValidUrl } from '../../lib/utils';
 
 export default async function handler(req, res) {
@@ -9,12 +11,24 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'URL tidak valid' });
     }
 
-    // Ubah URL asli jadi Base64 (biar aman & pendek)
-    const encodedUrl = Buffer.from(tiktokUrl).toString('base64url');
-    const shortUrl = `https://vtiktok.ccd/${encodedUrl}`;
+    let meta = {};
+    try {
+      const r = await fetch(`https://www.tiktok.com/oembed?url=${encodeURIComponent(tiktokUrl)}`);
+      if (r.ok) meta = await r.json();
+    } catch (e) {}
+
+    // Buat ID acak 7 huruf
+    const id = nanoid(7);
+    
+    // Simpan URL asli ke Database Vercel KV
+    await kv.set(id, { url: tiktokUrl, meta });
+    
+    // Bikin link pendek (TANPA karakter aneh)
+    const shortUrl = `https://vtiktok.ccd/vt/${id}`;
     
     res.status(200).json({ short: shortUrl });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ error: 'Server Error' });
   }
 }

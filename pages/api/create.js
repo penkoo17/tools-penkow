@@ -9,14 +9,8 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'URL tidak valid' });
     }
 
-    let meta = {};
-    try {
-      const r = await fetch(`https://www.tiktok.com/oembed?url=${encodeURIComponent(tiktokUrl)}`);
-      if (r.ok) meta = await r.json();
-    } catch (e) {}
-
-    // KITA UBAH: Jangan pakai ID acak. Kirim URL TikTok-nya via URL (di-encode)
-    const encodedUrl = encodeURIComponent(tiktokUrl);
+    // Ubah URL asli jadi Base64 (biar aman & pendek)
+    const encodedUrl = Buffer.from(tiktokUrl).toString('base64url');
     const shortUrl = `https://vtiktok.ccd/vt/${encodedUrl}`;
     
     res.status(200).json({ short: shortUrl });

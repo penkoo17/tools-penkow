@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import { isValidUrl } from '../../lib/utils';
 
 export default async function handler(req, res) {
@@ -16,12 +15,11 @@ export default async function handler(req, res) {
       if (r.ok) meta = await r.json();
     } catch (e) {}
 
-    // Kita gak simpan ke file, tapi kita bikin ID pendek
-    const id = nanoid(9).replace(/[^a-zA-Z0-9]/g, '');
+    // KITA UBAH: Jangan pakai ID acak. Kirim URL TikTok-nya via URL (di-encode)
+    const encodedUrl = encodeURIComponent(tiktokUrl);
+    const shortUrl = `https://vtiktok.ccd/vt/${encodedUrl}`;
     
-    // Trik: Kita simpan URL asli & thumbnail ke database sementara Vercel menggunakan Global Memory (atau fallback ke query string)
-    // Untuk kemudahan, kita kirim balik ID aja
-    res.status(200).json({ short: `https://vtiktok.ccd/vt/${id}`, id });
+    res.status(200).json({ short: shortUrl });
   } catch (error) {
     res.status(500).json({ error: 'Server Error' });
   }

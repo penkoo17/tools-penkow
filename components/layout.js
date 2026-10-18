@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       <header className="app-nav">
         <div className="nav-inner">
           <Link href="/" className="brand">
-            PENKO
+            created by penko
           </Link>
 
           <nav className="nav-links" aria-label="Menu">
@@ -34,8 +34,6 @@ export default function Layout({ children }) {
       </header>
 
       <main className="app-main">{children}</main>
-
-      <footer className="dev-credit">developer : penko</footer>
     </div>
   );
 }

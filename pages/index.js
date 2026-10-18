@@ -18,7 +18,7 @@ export default function Home() {
       <Layout>
         <div className="home">
           <div className="home-grid">
-            <h1 className="brand-hero">PENKO</h1>
+            <h1 className="brand-hero">url injection tools</h1>
 
             <section className="card">
               <div className="card-bar" aria-hidden="true">

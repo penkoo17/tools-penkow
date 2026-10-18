@@ -3,6 +3,7 @@
   --surface: #ffffff;
   --text: #111111;
   --muted: #8a8a8e;
+  --green-neon: #39ff14;
   --line: rgba(0, 0, 0, 0.08);
   --accent: #007aff;
   --accent-deep: #0066d6;
@@ -100,11 +101,17 @@ button {
 }
 
 .brand {
-  color: var(--text);
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 8px;
+  background: #0b0d0b;
+  color: var(--green-neon);
   text-decoration: none;
-  font-size: 18px;
+  font-family: var(--font-mono);
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: -0.045em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -157,10 +164,13 @@ button {
 
 .brand-hero {
   margin: 0;
-  font-size: clamp(64px, 10vw, 124px);
+  max-width: 14ch;
+  color: var(--text);
+  font-size: clamp(34px, 4.4vw, 58px);
   font-weight: 800;
-  line-height: 0.9;
-  letter-spacing: -0.07em;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
 }
 
 .card {
@@ -632,18 +642,6 @@ button {
   width: 50%;
 }
 
-/* Developer credit */
-
-.dev-credit {
-  background: #000000;
-  color: #ffffff;
-  padding: 13px 20px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  text-align: center;
-}
-
 @keyframes shimmer {
   0% {
     background-position: 100% 0;
@@ -670,7 +668,8 @@ button {
   }
 
   .brand-hero {
-    font-size: clamp(56px, 16vw, 84px);
+    max-width: none;
+    font-size: clamp(32px, 9vw, 44px);
   }
 }
 

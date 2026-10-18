@@ -1,31 +1,18 @@
-import { appendLog } from '../../lib/store';
+import { kv } from '@vercel/kv';
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') return res.status(405).end();
-  const body = req.body || {};
-
-  // Fallback Server-side IP Geo (Pakai API IPWHO yang stabil)
-  if (body.ip && !body.ip.startsWith('192.168') && !body.ip.startsWith('127.')) {
-    try {
-      const geoRes = await fetch(`https://ipwho.is/${body.ip}`);
-      const geo = await geoRes.json();
-      if (geo.success) {
-        body.ipGeo = {
-          city: geo.city,
-          country: geo.country,
-          lat: geo.latitude,
-          lng: geo.longitude,
-          isp: geo.connection?.isp
-        };
-      }
-    } catch (e) {}
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  
+  try {
+    const body = req.body || {};
+    const logId = Date.now().toString() + Math.random().toString(36).substring(7);
+    
+    // Simpan log ke Database Vercel KV
+    await kv.set(`log_${logId}`, { ...body, id_waktu: logId });
+    
+    res.status(200).json({ ok: true });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Gagal simpan log' });
   }
-
-  // Jika client berhasil mendapatkan IP Geo sendiri, gunakan itu
-  if (body.clientIpGeo && !body.ipGeo) {
-    body.ipGeo = body.clientIpGeo;
-  }
-
-  appendLog(body);
-  res.json({ ok: true });
 }

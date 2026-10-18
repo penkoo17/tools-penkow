@@ -740,3 +740,153 @@ button {
     transition-duration: 0.001ms !important;
   }
 }
+
+/* Dashboard actions */
+
+.dash-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.text-btn {
+  height: 44px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.text-btn:hover {
+  background: rgba(0, 122, 255, 0.08);
+}
+
+/* Login */
+
+.login {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.login-inner {
+  width: 100%;
+  max-width: 340px;
+}
+
+.login-title {
+  margin: 0 0 6px;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.login-sub {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field-group {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+}
+
+.field-row + .field-row {
+  border-top: 1px solid var(--line);
+}
+
+.login-input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.login-input::placeholder {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.login-input:focus {
+  outline: none;
+}
+
+.login-input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  border-radius: 14px;
+}
+
+.login-error {
+  margin: 0 2px;
+  color: #ff3b30;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-btn {
+  height: 50px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.login-btn:hover:not(:disabled) {
+  background: var(--accent-deep);
+}
+
+.login-btn:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.login-btn:disabled {
+  opacity: 0.55;
+  cursor: progress;
+}
+
+@media (max-width: 420px) {
+  .login {
+    align-items: flex-start;
+    padding: 28px 20px;
+  }
+
+  .login-inner {
+    margin-top: 11vh;
+  }
+
+  .login-title {
+    font-size: 34px;
+  }
+}

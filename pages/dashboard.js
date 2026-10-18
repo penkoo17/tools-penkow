@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import LogTable from '../components/LogTable.js';
+import LogTable from '../components/logtable.js';
 import Layout from '../components/layout.js';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { readSession, SESSION_COOKIE } from '../lib/auth';
 
 function RefreshIcon() {
   return (
@@ -24,6 +26,7 @@ function RefreshIcon() {
 }
 
 export default function Dashboard() {
+  const router = useRouter();
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -42,6 +45,14 @@ export default function Dashboard() {
   useEffect(() => {
     load();
   }, []);
+
+  async function logout() {
+    try {
+      await fetch('/api/logout', { method: 'POST' });
+    } finally {
+      router.replace('/login');
+    }
+  }
 
   const gpsCount = logs.filter(log => {
     const lat = Number(log.gps?.lat);
@@ -68,17 +79,23 @@ export default function Dashboard() {
           <header className="dash-head">
             <h1 className="dash-title">Dashboard</h1>
 
-            <button
-              type="button"
-              onClick={load}
-              disabled={loading}
-              aria-busy={loading}
-              aria-label="Refresh"
-              title="Refresh"
-              className={`icon-btn${loading ? ' is-spinning' : ''}`}
-            >
-              <RefreshIcon />
-            </button>
+            <div className="dash-actions">
+              <button type="button" className="text-btn" onClick={logout}>
+                Keluar
+              </button>
+
+              <button
+                type="button"
+                onClick={load}
+                disabled={loading}
+                aria-busy={loading}
+                aria-label="Refresh"
+                title="Refresh"
+                className={`icon-btn${loading ? ' is-spinning' : ''}`}
+              >
+                <RefreshIcon />
+              </button>
+            </div>
           </header>
 
           <section className="stats" aria-label="Ringkasan">
@@ -108,4 +125,14 @@ export default function Dashboard() {
       </Layout>
     </>
   );
+}
+
+export function getServerSideProps({ req }) {
+  if (!readSession(req.cookies[SESSION_COOKIE])) {
+    return {
+      redirect: { destination: '/login?next=%2Fdashboard', permanent: false }
+    };
+  }
+
+  return { props: {} };
 }

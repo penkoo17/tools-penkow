@@ -1,6 +1,13 @@
 import { kv } from '@vercel/kv';
+import { readSession, SESSION_COOKIE } from '../../lib/auth';
 
 export default async function handler(req, res) {
+  res.setHeader('Cache-Control', 'no-store');
+
+  if (!readSession(req.cookies[SESSION_COOKIE])) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+
   try {
     // Ambil semua key yang ada di database
     const keys = await kv.keys('log_*');

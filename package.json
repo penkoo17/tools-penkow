@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "set-password": "node scripts/set-password.js",
+    "delete-account": "node scripts/delete-account.js"
   },
   "dependencies": {
     "@vercel/kv": "^3.0.0",

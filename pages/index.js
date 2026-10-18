@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
       </Head>
       <div style={{ 
-        backgroundColor: '#f2f2f7', // Background abu-abu sangat muda khas iOS
+        backgroundColor: '#f2f2f7',
         color: '#000', 
         minHeight: '100vh', 
         display: 'flex', 
@@ -23,7 +23,6 @@ export default function Home() {
         padding: '20px',
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
       }}>
-        
         <div style={{ width: '100%', maxWidth: '400px' }}>
           <h1 style={{ fontSize: '34px', fontWeight: '800', letterSpacing: '-1px', marginBottom: '8px', textAlign: 'center' }}>
             PENKO Tools

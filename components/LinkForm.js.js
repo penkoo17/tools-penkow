@@ -52,7 +52,7 @@ export default function LinkForm({ onResult, onError }) {
           fontWeight: '700', 
           borderRadius: '12px', 
           border: 'none', 
-          backgroundColor: loading ? '#e5e5ea' : '#007aff', // Biru khas iOS
+          backgroundColor: loading ? '#e5e5ea' : '#007aff',
           color: loading ? '#8e8e93' : '#ffffff',
           cursor: loading ? 'not-allowed' : 'pointer',
           boxShadow: '0 4px 12px rgba(0,122,255,0.3)',

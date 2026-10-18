@@ -52,7 +52,6 @@ export default function Dashboard() {
             {loading ? 'Memuat...' : 'Refresh'}
           </button>
         </div>
-
         <LogTable logs={logs} />
       </div>
     </>

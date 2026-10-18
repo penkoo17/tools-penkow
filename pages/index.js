@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import LinkForm from '../components/LinkForm.js';
-import Layout from '../components/layout';
+import Layout from '../components/layout.js';
 import Head from 'next/head';
 
 export default function Home() {

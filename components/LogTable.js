@@ -1,83 +1,181 @@
-export default function LogTable({ logs = [] }) {
-  if (!logs.length) return <p style={{ color: '#8e8e93', textAlign: 'center', marginTop: '40px', fontSize: '15px', fontWeight: '500' }}>Belum ada data log yang masuk.</p>;
+function toFiniteNumber(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
+function normalizeLog(log, index) {
+  const geo = log.clientIpGeo || log.ipGeo || {};
+  const gpsLat = log.gps ? toFiniteNumber(log.gps.lat) : null;
+  const gpsLng = log.gps ? toFiniteNumber(log.gps.lng) : null;
+  const geoLat = toFiniteNumber(geo.lat);
+  const geoLng = toFiniteNumber(geo.lng);
+  const isGps = gpsLat !== null && gpsLng !== null;
+  const lat = isGps ? gpsLat : geoLat;
+  const lng = isGps ? gpsLng : geoLng;
+  const timestamp = log.ts || log.received || log.timestamp;
+  const date = timestamp ? new Date(timestamp) : null;
+  const hasValidDate = date && !Number.isNaN(date.getTime());
+  const location = isGps
+    ? `${lat.toFixed(5)}, ${lng.toFixed(5)}`
+    : [geo.city, geo.country].filter(Boolean).join(', ') || '—';
+
+  return {
+    key: log.id_waktu || `${timestamp || 'log'}-${index}`,
+    time: hasValidDate
+      ? date.toLocaleString('id-ID', { dateStyle: 'short', timeStyle: 'short' })
+      : '—',
+    isGps,
+    typeLabel: isGps ? 'GPS' : 'IP',
+    ip: log.ip || geo.ip || 'Unknown',
+    location,
+    mapsUrl:
+      isGps || (lat !== null && lng !== null)
+        ? `https://www.google.com/maps?q=${lat},${lng}`
+        : null
+  };
+}
+
+function MapArrow() {
+  return (
+    <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+      <path
+        d="M3 9L9 3M4 3H9V8"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function EmptyState() {
+  return (
+    <div className="empty">
+      <span className="empty-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <rect
+            x="2.5"
+            y="4"
+            width="15"
+            height="12"
+            rx="3"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          />
+          <path
+            d="M2.5 8H17.5M7 4V2.5M13 4V2.5"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+        </svg>
+      </span>
+      <p className="empty-text">Belum ada log</p>
+    </div>
+  );
+}
+
+function LoadingState() {
+  return (
+    <div className="skeleton" aria-busy="true" aria-label="Memuat">
+      {[0, 1, 2, 3].map(item => (
+        <div className="skeleton-row" key={item}>
+          <span className="skeleton-bar w-20" />
+          <span className="skeleton-bar w-35" />
+          <span className="skeleton-bar w-50" />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default function LogTable({ logs = [], loading = false }) {
+  if (loading && logs.length === 0) return <LoadingState />;
+  if (!logs.length) return <EmptyState />;
+
+  const rows = logs.map(normalizeLog);
 
   return (
-    <div style={{ 
-      backgroundColor: '#ffffff', 
-      borderRadius: '20px', 
-      boxShadow: '0 8px 32px rgba(0,0,0,0.04)', 
-      overflow: 'hidden',
-      border: '1px solid #e5e5ea'
-    }}>
-      <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '14px', whiteSpace: 'nowrap' }}>
-          <thead style={{ backgroundColor: '#f9f9f9', borderBottom: '1px solid #e5e5ea' }}>
-            <tr>
-              <th style={{ padding: '16px 20px', fontWeight: '700', color: '#8e8e93', textTransform: 'uppercase', fontSize: '12px', letterSpacing: '0.5px' }}>Waktu</th>
-              <th style={{ padding: '16px 20px', fontWeight: '700', color: '#8e8e93', textTransform: 'uppercase', fontSize: '12px', letterSpacing: '0.5px' }}>Tipe</th>
-              <th style={{ padding: '16px 20px', fontWeight: '700', color: '#8e8e93', textTransform: 'uppercase', fontSize: '12px', letterSpacing: '0.5px' }}>IP / GPS</th>
-              <th style={{ padding: '16px 20px', fontWeight: '700', color: '#8e8e93', textTransform: 'uppercase', fontSize: '12px', letterSpacing: '0.5px' }}>Lokasi</th>
-              <th style={{ padding: '16px 20px', fontWeight: '700', color: '#8e8e93', textTransform: 'uppercase', fontSize: '12px', letterSpacing: '0.5px' }}>Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            {logs.map((l, i) => {
-              const geo = l.clientIpGeo || l.ipGeo || {};
-              const lat = l.gps ? l.gps.lat : geo.lat;
-              const lng = l.gps ? l.gps.lng : geo.lng;
-              const rawIp = l.ip || geo.ip || 'Unknown';
-
-              return (
-                <tr key={i} style={{ borderBottom: i === logs.length - 1 ? 'none' : '1px solid #e5e5ea' }}>
-                  <td style={{ padding: '16px 20px', color: '#000', fontWeight: '600' }}>
-                    {new Date(l.ts || l.received).toLocaleString('id-ID', { dateStyle: 'short', timeStyle: 'short' })}
-                  </td>
-                  <td style={{ padding: '16px 20px' }}>
-                    <span style={{ 
-                      padding: '6px 12px', 
-                      borderRadius: '20px', 
-                      fontSize: '12px',
-                      fontWeight: '700',
-                      backgroundColor: l.gps ? '#e3f2fd' : '#f2f2f7', 
-                      color: l.gps ? '#007aff' : '#8e8e93'
-                    }}>
-                      {l.gps ? 'GPS Akurat' : 'IP Only'}
+    <>
+      <div className="table-card">
+        <div className="table-scroll">
+          <table className="log-table">
+            <thead>
+              <tr>
+                <th scope="col">Waktu</th>
+                <th scope="col">Tipe</th>
+                <th scope="col">IP</th>
+                <th scope="col">Lokasi</th>
+                <th scope="col">Peta</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map(row => (
+                <tr key={row.key}>
+                  <td>{row.time}</td>
+                  <td>
+                    <span className={`badge ${row.isGps ? 'badge-gps' : 'badge-ip'}`}>
+                      {row.typeLabel}
                     </span>
                   </td>
-                  <td style={{ padding: '16px 20px', color: '#007aff', fontWeight: '600', fontFamily: 'monospace' }}>
-                    {rawIp}
+                  <td>
+                    <span className="ip" title={row.ip}>
+                      {row.ip}
+                    </span>
                   </td>
-                  <td style={{ padding: '16px 20px', color: '#000', fontWeight: '500' }}>
-                    {l.gps ? `${lat.toFixed(5)}, ${lng.toFixed(5)}` : (geo.city ? `${geo.city}, ${geo.country}` : '-')}
-                  </td>
-                  <td style={{ padding: '16px 20px' }}>
-                    {lat && lng ? (
-                      <a 
-                        href={`https://www.google.com/maps?q=${lat},${lng}`} 
-                        target="_blank" 
+                  <td className="muted">{row.location}</td>
+                  <td>
+                    {row.mapsUrl ? (
+                      <a
+                        className="map-link"
+                        href={row.mapsUrl}
+                        target="_blank"
                         rel="noreferrer"
-                        style={{ 
-                          padding: '8px 16px', 
-                          backgroundColor: '#f2f2f7', 
-                          color: '#007aff', 
-                          borderRadius: '10px', 
-                          textDecoration: 'none', 
-                          fontSize: '13px', 
-                          fontWeight: '700',
-                          display: 'inline-block',
-                          transition: 'all 0.2s ease'
-                        }}
                       >
-                        Buka Peta
+                        Peta
+                        <MapArrow />
                       </a>
-                    ) : '-'}
+                    ) : (
+                      <span className="muted">—</span>
+                    )}
                   </td>
                 </tr>
-              );
-            })}
-          </tbody>
-        </table>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
+
+      <div className="cards">
+        {rows.map(row => (
+          <article className="log-card" key={row.key}>
+            <div className="log-card-top">
+              <span className="log-card-time">{row.time}</span>
+              <span className={`badge ${row.isGps ? 'badge-gps' : 'badge-ip'}`}>
+                {row.typeLabel}
+              </span>
+            </div>
+
+            <div className="log-card-ip">{row.ip}</div>
+            <div className="log-card-loc">{row.location}</div>
+
+            {row.mapsUrl && (
+              <div className="log-card-foot">
+                <a
+                  className="map-link"
+                  href={row.mapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Peta
+                  <MapArrow />
+                </a>
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </>
   );
 }

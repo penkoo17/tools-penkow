@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import LinkForm from '../components/LinkForm.js'; // Tambah .js
+import LinkForm from '../components/LinkForm.js';
+import Layout from '../components/layout';
 import Head from 'next/head';
 
 export default function Home() {
@@ -9,57 +10,64 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>PENKO Tools</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <title>PENKO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Shortlink TikTok." />
       </Head>
-      <div style={{ 
-        backgroundColor: '#f2f2f7', // Latar belakang abu-abu bersih khas iOS
-        color: '#000', 
-        minHeight: '100vh', 
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center', 
-        justifyContent: 'center',
-        padding: '24px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-      }}>
-        <div style={{ width: '100%', maxWidth: '400px' }}>
-          
-          <h1 style={{ fontSize: '36px', fontWeight: '800', letterSpacing: '-1px', marginBottom: '8px', textAlign: 'center', color: '#000' }}>
-            PENKO Tools
-          </h1>
-          <p style={{ color: '#8e8e93', fontSize: '15px', fontWeight: '500', marginBottom: '32px', textAlign: 'center' }}>
-            Tempel URL TikTok, dapatkan shortlink.
-          </p>
-          
-          <LinkForm onResult={(s) => { setShort(s); setErr(''); }} onError={(e) => setErr(e)} />
-          
-          {err && (
-            <p style={{ color: '#ff3b30', fontSize: '14px', fontWeight: '600', marginTop: '16px', textAlign: 'center', padding: '12px', background: 'rgba(255,59,48,0.1)', borderRadius: '10px' }}>
-              {err}
-            </p>
-          )}
 
-          {short && (
-            <div style={{ 
-              marginTop: '24px', 
-              padding: '24px', 
-              background: '#ffffff', 
-              borderRadius: '16px', 
-              boxShadow: '0 8px 32px rgba(0,0,0,0.06)', // Bayangan halus iOS
-              textAlign: 'center',
-              border: '1px solid #e5e5ea'
-            }}>
-              <p style={{ color: '#8e8e93', fontSize: '13px', fontWeight: '600', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.5px' }}>
-                Shortlink Berhasil Dibuat
-              </p>
-              <a href={short} target="_blank" rel="noreferrer" style={{ color: '#007aff', fontSize: '18px', fontWeight: '700', textDecoration: 'none', wordBreak: 'break-all' }}>
-                {short}
-              </a>
-            </div>
-          )}
+      <Layout>
+        <div className="home">
+          <div className="home-grid">
+            <h1 className="brand-hero">PENKO</h1>
+
+            <section className="card">
+              <div className="card-bar" aria-hidden="true">
+                <span className="dot" />
+                <span className="dot" />
+                <span className="dot" />
+              </div>
+
+              <div className="card-body">
+                <LinkForm
+                  onResult={s => {
+                    setShort(s);
+                    setErr('');
+                  }}
+                  onError={e => setErr(e)}
+                />
+
+                <div aria-live="polite">
+                  {err && <p className="alert-error">{err}</p>}
+
+                  {short && (
+                    <div className="result">
+                      <span className="result-icon" aria-hidden="true">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                          <path
+                            d="M2.25 6.25L4.75 8.75L9.75 3.25"
+                            stroke="currentColor"
+                            strokeWidth="1.8"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <a
+                        className="result-link"
+                        href={short}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {short}
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
+      </Layout>
     </>
   );
 }

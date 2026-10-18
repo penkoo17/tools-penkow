@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import LogTable from '../components/logtable.js';
+import LogTable from '../components/LogTable.js';
 import Layout from '../components/layout.js';
 import Head from 'next/head';
 import { useRouter } from 'next/router';

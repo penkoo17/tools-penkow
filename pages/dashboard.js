@@ -25,7 +25,7 @@ function RefreshIcon() {
   );
 }
 
-export default function Dashboard() {
+export default function Dashboard({ username }) {
   const router = useRouter();
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -80,6 +80,8 @@ export default function Dashboard() {
             <h1 className="dash-title">Dashboard</h1>
 
             <div className="dash-actions">
+              {username && <span className="user-chip">{username}</span>}
+
               <button type="button" className="text-btn" onClick={logout}>
                 Keluar
               </button>
@@ -128,11 +130,12 @@ export default function Dashboard() {
 }
 
 export function getServerSideProps({ req }) {
-  if (!readSession(req.cookies[SESSION_COOKIE])) {
+  const session = readSession(req.cookies[SESSION_COOKIE]);
+  if (!session) {
     return {
       redirect: { destination: '/login?next=%2Fdashboard', permanent: false }
     };
   }
 
-  return { props: {} };
+  return { props: { username: session.username } };
 }

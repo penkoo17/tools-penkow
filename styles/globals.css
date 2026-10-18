@@ -749,6 +749,17 @@ button {
   gap: 4px;
 }
 
+.user-chip {
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .text-btn {
   height: 44px;
   padding: 0 14px;
@@ -874,6 +885,12 @@ button {
 .login-btn:disabled {
   opacity: 0.55;
   cursor: progress;
+}
+
+@media (max-width: 560px) {
+  .user-chip {
+    display: none;
+  }
 }
 
 @media (max-width: 420px) {

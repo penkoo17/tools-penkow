@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "set-password": "node scripts/set-password.js",
-    "delete-account": "node scripts/delete-account.js",
+    "accounts": "node scripts/accounts.js list",
+    "accounts:export": "node scripts/accounts.js export",
+    "add-account": "node scripts/accounts.js add",
+    "remove-account": "node scripts/accounts.js remove",
     "check-imports": "node scripts/check-import-case.js ."
   },
   "dependencies": {

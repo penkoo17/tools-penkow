@@ -1,3 +1,4 @@
 *.bak.*
 *.log
 auth.json
+accounts.json

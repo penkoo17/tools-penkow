@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import LogTable from '../components/LogTable';
-import Head from 'next/head';
 
 export default function Dashboard() {
   const [logs, setLogs] = useState([]);
@@ -21,39 +19,50 @@ export default function Dashboard() {
   useEffect(() => { load(); }, []);
 
   return (
-    <>
-      <Head>
-        <title>Dashboard - PENKO Tools</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-      </Head>
-      <div style={{ 
-        padding: '20px', 
-        backgroundColor: '#f2f2f7', 
-        color: '#000', 
-        minHeight: '100vh', 
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-      }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-          <h1 style={{ fontSize: '28px', fontWeight: '800', letterSpacing: '-0.5px', margin: 0 }}>Dashboard</h1>
-          <button 
-            onClick={load} 
-            style={{ 
-              padding: '8px 16px', 
-              fontSize: '14px', 
-              fontWeight: '600', 
-              borderRadius: '10px', 
-              border: 'none', 
-              backgroundColor: '#007aff', 
-              color: '#fff',
-              cursor: 'pointer',
-              boxShadow: '0 2px 8px rgba(0,122,255,0.3)'
-            }}
-          >
-            {loading ? 'Memuat...' : 'Refresh'}
-          </button>
-        </div>
-        <LogTable logs={logs} />
+    <div style={{ padding: 24, color: '#fff', backgroundColor: '#111', minHeight: '100vh', fontFamily: 'sans-serif' }}>
+      <h1>Dashboard Logs</h1>
+      <button onClick={load} style={{ marginBottom: 16, padding: '8px 16px', cursor: 'pointer' }}>
+        {loading ? 'Memuat...' : 'Refresh Data'}
+      </button>
+
+      <div style={{ overflowX: 'auto' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', border: '1px solid #333' }}>
+          <thead>
+            <tr style={{ backgroundColor: '#222' }}>
+              <th style={{ padding: 10, border: '1px solid #333' }}>Waktu</th>
+              <th style={{ padding: 10, border: '1px solid #333' }}>Tipe</th>
+              <th style={{ padding: 10, border: '1px solid #333' }}>IP</th>
+              <th style={{ padding: 10, border: '1px solid #333' }}>Lokasi</th>
+              <th style={{ padding: 10, border: '1px solid #333' }}>Target URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            {logs.length === 0 ? (
+              <tr><td colSpan="5" style={{ textAlign: 'center', padding: 20 }}>Belum ada data log.</td></tr>
+            ) : (
+              logs.map((l, i) => (
+                <tr key={i} style={{ borderBottom: '1px solid #333' }}>
+                  <td style={{ padding: 10, border: '1px solid #333', fontSize: 12 }}>
+                    {new Date(l.ts).toLocaleString()}
+                  </td>
+                  <td style={{ padding: 10, border: '1px solid #333' }}>
+                    <span style={{ padding: '2px 6px', background: l.gps ? '#0d47a1' : '#333', borderRadius: 4, fontSize: 12 }}>
+                      {l.gps ? 'GPS Akurat' : 'IP Only'}
+                    </span>
+                  </td>
+                  <td style={{ padding: 10, border: '1px solid #333', fontFamily: 'monospace' }}>{l.ip || '-'}</td>
+                  <td style={{ padding: 10, border: '1px solid #333' }}>
+                    {l.gps ? `${l.gps.lat.toFixed(5)}, ${l.gps.lng.toFixed(5)}` : '-'}
+                  </td>
+                  <td style={{ padding: 10, border: '1px solid #333', maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    {l.targetUrl || '-'}
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
       </div>
-    </>
+    </div>
   );
 }

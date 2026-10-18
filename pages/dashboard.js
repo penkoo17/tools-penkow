@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import LogTable from '../components/logtable';
-import Layout from '../components/layout';
+import LogTable from '../components/LogTable.js';
+import Layout from '../components/layout.js';
 import Head from 'next/head';
 
 function RefreshIcon() {
